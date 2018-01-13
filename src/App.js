@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import YouTube from 'react-youtube';
 import './App.css';
 
+import Nav from './nav.js';
 import { Header } from './header.js';
-import { Nav } from './nav.js';
 import { Comments } from './comments.js';
 import { Support } from './support.js';
 

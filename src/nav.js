@@ -1,16 +1,45 @@
-import React from 'react';  
-import { Link, IndexLink } from 'react-router';
-import logo from './ellevation-logo.svg'
+import React from 'react';
 import './App.css';
+import Tabs from './tabs/tabs.js';
+import Content from './tabs/content.js';
 
-export const Nav = () => {  
-  return (
-    <div className="content">
-      <header>
-        <nav>
-          {'Tabs'}
-        </nav>
-      </header>
-    </div>
-  );
+class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tabList: tabList,
+      currentTab: 1
+    };
+  }
+
+  changeTab(tab) {
+    this.setState({
+      currentTab: tab.id
+    });
+  }
+
+  render() {
+    debugger;
+    return (
+      <div className="content">
+        <Tabs
+          currentTab={this.state.currentTab}
+          tabList={this.state.tabList}
+          changeTab={this.changeTab.bind(this)}
+        />
+        <Content
+          currentTab={this.state.currentTab}
+        />
+      </div>
+    );
+  }
 };
+
+export default Nav;
+
+
+export const tabList = [
+    {'id': 1, 'name': 'About'},
+    {'id': 2, 'name': 'Activity Plan'},
+    {'id': 3, 'name': 'Examples'}
+];
