@@ -1,0 +1,148 @@
+/*
+Global
+*/
+.App {
+  display: grid;
+  text-align: center;
+  grid-gap: 20px;
+  grid-template-areas: 
+    "header"
+    "content"
+    "sidebar"
+    "ad"
+    "footer";
+}
+
+.App-logo {
+  height: 40px;
+  float: left;
+}
+/*
+Global END
+*/
+
+
+
+/*
+Header
+*/
+.main-head {
+  grid-area: header;
+}
+
+.App-header {
+  grid-area: header;
+  background-color: #222;
+  height: 15em;
+  color: white;
+  width: 100%
+}
+
+.App-title {
+  grid-area: header;
+  color: white;
+  font-size: 1.5em;
+  float: left;
+}
+
+.Resources {
+  grid-area: header;
+  display: inline-grid;
+  float: right;
+  background: #ccc;
+  height: 100%;
+  width: 25%;
+}
+/*
+Header END
+*/
+
+
+
+/*
+Content
+*/
+.left-wrapper {
+  grid-area: content;
+}
+
+.content {
+  grid-area: content;
+  background: #ccc;
+  height: 17.5em;
+}
+/*
+Content END
+*/
+
+
+/*
+Support
+*/
+.right-wrapper {
+  grid-area: sidebar;
+}
+
+.support {
+  grid-area: sidebar;
+  background: #ccc;
+  height: 17.5em;
+}
+/*
+Support END
+*/
+
+
+
+/*
+Youtube
+*/
+.youtube {
+  grid-area: ad;
+  background: #ccc;
+}
+/*
+Youtube END
+*/
+
+
+/*
+Footer
+*/
+.footer {
+  grid-area: footer;
+  background: #ccc;
+}
+/*
+Footer END
+*/
+
+
+
+@media (min-width: 500px) {
+  .App {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+      "header  header"
+      "sidebar content"
+      "ad      footer";
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 700px) {
+  .App {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+      "header header  header"
+      "content content ad"
+      "content content sidebar"
+      "footer footer footer"
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
