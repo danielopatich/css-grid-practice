@@ -11,7 +11,7 @@ class Tabs extends React.Component {
   render() {
     return (
       <nav className="tabs">
-        <ul>
+        <ul className="tabs-nav">
         {this.props.tabList.map(tab => (
            <Tab
              key={tab.id}

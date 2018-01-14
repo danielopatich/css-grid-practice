@@ -5,7 +5,7 @@ Global
   display: grid;
   text-align: center;
   grid-gap: 20px;
-  grid-template-areas: 
+  grid-template-areas:
     "header"
     "content"
     "sidebar"
@@ -15,7 +15,6 @@ Global
 
 .App-logo {
   height: 40px;
-  float: left;
 }
 /*
 Global END
@@ -30,9 +29,14 @@ Header
   grid-area: header;
 }
 
+.head-left {
+  display: inline-block;
+}
+
 .App-header {
   grid-area: header;
-  background-color: #222;
+  /* background-color: #F59231; */
+  background: #175FA2;
   height: 15em;
   color: white;
   width: 100%
@@ -42,16 +46,37 @@ Header
   grid-area: header;
   color: white;
   font-size: 1.5em;
-  float: left;
+  margin: 0;
+  text-align: left;
+}
+
+.App-reviews {
+  grid-area: header;
+  color: white;
+  font-size: 1.5em;
+  margin: 0;
+  text-align: left;
 }
 
 .Resources {
+  display: block;
+  vertical-align: middle;
   grid-area: header;
-  display: inline-grid;
   float: right;
-  background: #ccc;
-  height: 100%;
-  width: 25%;
+  background: #E4E4E7;
+  height: auto;
+  color: #4A4D5B;
+  opacity: .9;
+}
+
+.Resources-items {
+  list-style: none;
+  text-align: left;
+}
+
+.Resources-title {
+  text-align: left;
+  margin-left: 10px;
 }
 /*
 Header END
@@ -64,12 +89,39 @@ Content
 */
 .left-wrapper {
   grid-area: content;
+  margin-left: 10px;
 }
 
 .content {
   grid-area: content;
   background: #ccc;
-  height: 17.5em;
+  height: 60%;
+}
+
+ul.tabs-nav {
+  padding: 0;
+}
+
+ul.tabs-nav li {
+  display: inline-block;
+  border: 1px solid black;
+  width: 32.8%;
+}
+
+.selected-tab {
+  background-color: #fff;
+}
+
+.whole-tab {
+  display: block;
+  width: 100%;
+}
+
+.comments {
+  grid-area: content;
+  background: #ccc;
+  height: 60%;
+  margin-top: 20px;
 }
 /*
 Content END
@@ -81,12 +133,14 @@ Support
 */
 .right-wrapper {
   grid-area: sidebar;
+  margin-right: 10px;
 }
 
 .support {
   grid-area: sidebar;
   background: #ccc;
   height: 17.5em;
+  margin-top: 20px;
 }
 /*
 Support END
@@ -122,27 +176,26 @@ Footer END
 @media (min-width: 500px) {
   .App {
     grid-template-columns: 1fr 3fr;
-    grid-template-areas: 
-      "header  header"
+    grid-template-areas:
+      "header  resources"
       "sidebar content"
       "ad      footer";
   }
-  nav ul {
-    display: flex;
+  .content {
     justify-content: space-between;
   }
 }
 
 @media (min-width: 700px) {
   .App {
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
       "header header  header"
       "content content ad"
       "content content sidebar"
       "footer footer footer"
   }
-  nav ul {
+  .content {
     flex-direction: column;
   }
 }

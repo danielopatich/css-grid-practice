@@ -4,11 +4,10 @@ import './App.css';
 
 import Nav from './nav.js';
 import { Header } from './header.js';
-import { Comments } from './comments.js';
+import CommentSection from './comments.js';
 import { Support } from './support.js';
 
 class App extends Component {
-
   _onReady(e) {
     e.target.pauseVideo();
   }
@@ -19,7 +18,7 @@ class App extends Component {
         <Header/>
         <div className="left-wrapper">
           <Nav/>
-          <Comments/>
+          <CommentSection/>
         </div>
         <div className="right-wrapper">
           <YouTube

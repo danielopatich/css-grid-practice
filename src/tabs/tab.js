@@ -10,7 +10,7 @@ class Tab extends React.Component {
   render() {
     return (
       <li className={this.props.isCurrent ? 'selected-tab' : 'unselected-tab'}>
-      <a onClick={this.handleClick.bind(this)}>
+      <a className="whole-tab" onClick={this.handleClick.bind(this)}>
         {this.props.name}
       </a>
       </li>

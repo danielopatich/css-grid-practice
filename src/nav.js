@@ -19,7 +19,6 @@ class Nav extends React.Component {
   }
 
   render() {
-    debugger;
     return (
       <div className="content">
         <Tabs
