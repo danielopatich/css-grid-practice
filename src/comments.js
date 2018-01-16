@@ -24,8 +24,7 @@ class CommentSection extends Component {
     e.preventDefault();
 
     let newComment = [{
-      text: this.state.text,
-      id: Date.now()
+      text: this.state.text
       },
       ...this.state.comments
     ];
@@ -36,26 +35,27 @@ class CommentSection extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="comments-wrapper">
-      <h3>Comments({this.state.comments.length})</h3>
-      <form onSubmit={this.handleSubmit}>
-      <input
-      className="comment-form"
-      placeholder={"Write a comment..."}
-      onChange={this.onChange}
-      value={this.state.text}
-      autoFocus="true"
-      />
-      <button
-      className="comment-button">
-      {'Add'}
-      </button>
-      </form>
-      <CommentList
-      comments={this.state.comments}
-      />
+      <h2>Comments({this.state.comments.length})</h2>
+      <div className="comments-list-wrapper">
+        <form className="comments-form-area" onSubmit={this.handleSubmit}>
+          <input
+            className="comment-form"
+            placeholder={"Write a comment..."}
+            onChange={this.onChange}
+            value={this.state.text}
+            autoFocus="true"
+          />
+          <button
+          className="comment-button">
+          {'Add'}
+          </button>
+        </form>
+        <CommentList
+        comments={this.state.comments}
+        />
+      </div>
       </div>
     );
   }
@@ -64,11 +64,9 @@ class CommentSection extends Component {
 export default CommentSection;
 
 const CommentList = props => {
-
   const Comment = (comment, index) => (
     <div
       className="comment-item"
-      key={comment.id}
       index={index}
     >{comment.text}</div>
   );

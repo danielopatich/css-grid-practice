@@ -3,8 +3,8 @@ import YouTube from 'react-youtube';
 import './App.css';
 
 import Nav from './nav.js';
-import { Header } from './header.js';
 import CommentSection from './comments.js';
+import { Header } from './header.js';
 import { Support } from './support.js';
 
 class App extends Component {
@@ -35,6 +35,8 @@ class App extends Component {
   }
 }
 
+export default App;
+
 const opts = {
   height: '300',
   width: '400',
@@ -42,5 +44,3 @@ const opts = {
     autoplay: 0
   }
 };
-
-export default App;

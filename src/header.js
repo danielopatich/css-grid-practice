@@ -3,6 +3,7 @@ import { Link, IndexLink } from 'react-router';
 import logo from './ellevation-logo.svg'
 import './App.css';
 import Star from './star.svg';
+// import Share from './';
 
 export const Header = () => {
   return (
@@ -11,13 +12,9 @@ export const Header = () => {
       <header className="App-header">
         <div className="head-left">
           <h1 className="App-title">Hanging Hashtags</h1>
-
-          <div className="star"/><span className="App-reviews">Reviews</span>
-        </div>
-        <div className="header-buttons">
-          <button>Save</button>
+          <div className="header-buttons">
           <button>Share</button>
-          <button>Comment</button>
+          </div>
         </div>
         <div className="Resources">
           <h2 className="Resources-title">Resources</h2>

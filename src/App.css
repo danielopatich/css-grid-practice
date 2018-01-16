@@ -2,6 +2,7 @@
 Global
 */
 .App {
+  font-family: 'Nunito', sans-serif;
   display: grid;
   text-align: center;
   grid-gap: 20px;
@@ -14,7 +15,17 @@ Global
 }
 
 .App-logo {
-  height: 40px;
+  height: 3em;
+  margin-top: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+#root {
+  background: #F5F5F5;
+  height: 80em;
 }
 /*
 Global END
@@ -29,25 +40,27 @@ Header
   grid-area: header;
 }
 
-.head-left {
+/* .head-left {
   display: inline-block;
-}
+} */
 
 .App-header {
   grid-area: header;
-  /* background-color: #F59231; */
-  background: #175FA2;
-  height: 15em;
+  background: #063967;
   color: white;
-  width: 100%
+  box-shadow: 0px 2px 14px 0 #FA5B13;
+  padding: 2em;
+  /* display: inline-grid; */
+  /* float: right; */
+  height: 15em;
 }
 
 .App-title {
   grid-area: header;
   color: white;
-  font-size: 1.5em;
   margin: 0;
   text-align: left;
+  font-size: 4em;
 }
 
 .App-reviews {
@@ -63,10 +76,9 @@ Header
   vertical-align: middle;
   grid-area: header;
   float: right;
-  background: #E4E4E7;
+  background: #598FBF;
   height: auto;
-  color: #4A4D5B;
-  opacity: .9;
+  color: white;
 }
 
 .Resources-items {
@@ -77,6 +89,21 @@ Header
 .Resources-title {
   text-align: left;
   margin-left: 10px;
+}
+
+.header-buttons {
+  float: left;
+}
+
+.header-buttons button {
+  height: 3em;
+  width: 10em;
+  color: white;
+  border: none;
+  background: #598FBF;
+  :hover {
+    background-color: black;
+  }
 }
 /*
 Header END
@@ -93,28 +120,60 @@ Content
 }
 
 .content {
+  background: white;
+  border: 3.4px solid #063967;
   grid-area: content;
-  background: #ccc;
   height: 60%;
+}
+
+.tab-content {
+  padding: 10px;
 }
 
 ul.tabs-nav {
   padding: 0;
+  margin: 0;
 }
 
 ul.tabs-nav li {
   display: inline-block;
-  border: 1px solid black;
-  width: 32.8%;
+  width: 33.33%;
+  height: 3em;
+  text-align: center;
 }
 
 .selected-tab {
-  background-color: #fff;
+  background-color: #598FBF;
+  color: white;
+}
+
+.unselected-tab {
+  background-color: #1760A2;
+  color: white;
 }
 
 .whole-tab {
-  display: block;
-  width: 100%;
+  display: table-cell;
+  width: 28em;
+  height: 3em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.comments-wrapper {
+  /* background: grey; */
+}
+
+.comments-wrapper h2 {
+  text-align: left;
+}
+
+.comment-button {
+  height: 3em;
+  width: 10em;
+  color: white;
+  border: none;
+  background: #598FBF;
 }
 
 .comments {
@@ -123,9 +182,55 @@ ul.tabs-nav li {
   height: 60%;
   margin-top: 20px;
 }
+
+.comments-list {
+  max-height: 17.5em;
+  overflow: scroll;
+}
+
+.comments-list-wrapper {
+  background: white;
+  border: 3.4px solid #063967;
+  height: 17.5em;
+  overflow: scroll;
+}
+
+.comments-form-area {
+  margin: 20px 0px;
+}
+
+.comment-form {
+  background: #598FBF;
+  opacity: 0.7;
+  width: 50%;
+  /* font-size: 1em; */
+  border: none;
+  height: 2.8em;
+}
+
+input::placeholder {
+  background: #598FBF;
+  color: white;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.comment-item {
+  background: #1760A2;
+  color: white;
+  float: left;
+  height: 5em;
+  width: 50%;
+  margin: 25px;
+  text-align: left;
+  padding: 10px;
+}
 /*
 Content END
 */
+
 
 
 /*
@@ -137,10 +242,27 @@ Support
 }
 
 .support {
+  background: white;
+  border: 3.4px solid #063967;
   grid-area: sidebar;
-  background: #ccc;
   height: 17.5em;
-  margin-top: 20px;
+}
+
+.support-wrapper h3 {
+  text-align: center;
+}
+
+.support-wrapper h2 {
+  text-align: left;
+}
+
+.support-wrapper button {
+  height: 3em;
+  /* width: 10em; */
+  color: white;
+  border: none;
+  background: #598FBF;
+  width: 50%;
 }
 /*
 Support END
