@@ -2,55 +2,55 @@ export const Students = [
 	{
 		"studentId": "1",
 		"name": "Sarah",
-		"grade": "A",
+		"grade": "9",
 		"support": "High"
 	},
 	{
 		"studentId": "2",
 		"name": "Michael",
-		"grade": "B",
+		"grade": "9",
 		"support": "High"
 	},
 	{
 		"studentId": "3",
 		"name": "Leonard",
-		"grade": "B",
+		"grade": "11",
 		"support": "Low"
 	},
 	{
 		"studentId": "4",
 		"name": "Taylor",
-		"grade": "C",
+		"grade": "12",
 		"support": "Moderate"
 	},
 	{
 		"studentId": "5",
 		"name": "Kaylee",
-		"grade": "A",
+		"grade": "9",
 		"support": "Low"
 	},
 	{
 		"studentId": "6",
 		"name": "Jennifer",
-		"grade": "C",
+		"grade": "10",
 		"support": "High"
 	},
 	{
 		"studentId": "7",
 		"name": "Lucas",
-		"grade": "B",
+		"grade": "11",
 		"support": "Moderate"
 	},
 	{
 		"studentId": "8",
 		"name": "Sean",
-		"grade": "D",
+		"grade": "10",
 		"support": "Low"
 	},
 	{
 		"studentId": "9",
 		"name": "Emily",
-		"grade": "B",
+		"grade": "9",
 		"support": "Low"
 	}
 ]

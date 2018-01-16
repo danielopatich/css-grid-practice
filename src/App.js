@@ -3,9 +3,9 @@ import YouTube from 'react-youtube';
 import './App.css';
 
 import Nav from './nav.js';
+import Support from './support.js';
 import CommentSection from './comments.js';
 import { Header } from './header.js';
-import { Support } from './support.js';
 
 class App extends Component {
   _onReady(e) {
@@ -13,6 +13,7 @@ class App extends Component {
   }
 
   render() {
+    debugger;
     return (
       <div className="App">
         <Header/>
@@ -27,7 +28,7 @@ class App extends Component {
             opts={opts}
             onReady={this._onReady}
           />
-          <Support/>
+          <Support />
         </div>
         <footer className="footer"></footer>
       </div>

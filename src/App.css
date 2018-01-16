@@ -185,7 +185,6 @@ ul.tabs-nav li {
 
 .comments-list {
   max-height: 17.5em;
-  overflow: scroll;
 }
 
 .comments-list-wrapper {
@@ -246,6 +245,7 @@ Support
   border: 3.4px solid #063967;
   grid-area: sidebar;
   height: 17.5em;
+  overflow: scroll;
 }
 
 .support-wrapper h3 {
@@ -263,6 +263,25 @@ Support
   border: none;
   background: #598FBF;
   width: 50%;
+}
+
+.support-wrapper select {
+    height: 3em;
+    width: 10em;
+    color: white;
+    border: none;
+    background: #598FBF;
+}
+
+.high-button, .moderate-button, .low-button{
+  height: 3em;
+  background: #FA5B13;
+  opacity: 0.9;
+  color: white;
+}
+
+.filter-item {
+  color: black;
 }
 /*
 Support END
