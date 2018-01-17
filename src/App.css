@@ -40,18 +40,12 @@ Header
   grid-area: header;
 }
 
-/* .head-left {
-  display: inline-block;
-} */
-
 .App-header {
   grid-area: header;
   background: #063967;
   color: white;
   box-shadow: 0px 2px 14px 0 #FA5B13;
   padding: 2em;
-  /* display: inline-grid; */
-  /* float: right; */
   height: 15em;
 }
 
@@ -101,9 +95,6 @@ Header
   color: white;
   border: none;
   background: #598FBF;
-  :hover {
-    background-color: black;
-  }
 }
 /*
 Header END
@@ -160,10 +151,6 @@ ul.tabs-nav li {
   vertical-align: middle;
 }
 
-.comments-wrapper {
-  /* background: grey; */
-}
-
 .comments-wrapper h2 {
   text-align: left;
 }
@@ -202,7 +189,6 @@ ul.tabs-nav li {
   background: #598FBF;
   opacity: 0.7;
   width: 50%;
-  /* font-size: 1em; */
   border: none;
   height: 2.8em;
 }
@@ -258,7 +244,6 @@ Support
 
 .support-wrapper button {
   height: 3em;
-  /* width: 10em; */
   color: white;
   border: none;
   background: #598FBF;
